@@ -10,8 +10,9 @@ is not edited here — a pull request against this repository will not be review
 ## Install
 
 - `npx skills add justcatit/cat-skills` — installs into your agent's skills folder.
-- `git clone https://github.com/justcatit/cat-skills` — the folders under `skills/` in the
-  clone are what your agent needs; copy or symlink them into its skills folder.
+- `git clone https://github.com/justcatit/cat-skills` — each `cat-*` folder in the clone is
+  one skill; copy or symlink those folders into your agent's skills folder. Agents look one
+  level deep, so the clone itself dropped into the skills folder is not found.
 - The zip on the [Releases page](https://docs.justcat.it/releases/) — for a firewalled
   install; unpack it into your agent's skills folder. It also carries the packaged
   documentation pages the skills link to, for when your agent cannot fetch a URL.
