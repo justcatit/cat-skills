@@ -36,8 +36,8 @@ lives in a database that needs a data source.
 ## Structure that runs can select by
 
 `Suite`, `Order`, `Test case` and `Name` form the full name; `Tags` are free labels. A run
-selects by a substring of the full name or by tags, so the structure is what the team will
-want to run separately: a `smoke` tag for the fast checks, a suite per area or per source
+selects by a pattern on the full name (`*` any text) or by tags, so the structure is what the
+team will want to run separately: a `smoke` tag for the fast checks, a suite per area or per source
 system, tags per schedule (`nightly`, `hourly`) or per environment. Names need not be
 unique, but two tests with one full name are reported twice, ambiguously:
 https://docs.justcat.it/reference/tests/properties/#full-name

@@ -21,7 +21,7 @@ fetch tool summarizes HTML.
 The console line shows only the result. The message is in the project's outputs, or on the
 console when the run uses `-l Error`, or one test at a time with `catcli open` and its
 `result` command, which shows the description, the message and both queries side by side.
-Re-run one test by name rather than the project: `catcli run -f "<name>" -n -l Error`.
+Re-run one test by name rather than the project: `catcli run -f "*.<name>" -n -l Error`.
 https://docs.justcat.it/reference/cat-cli/run/
 https://docs.justcat.it/reference/cat-cli/open/
 
@@ -81,7 +81,7 @@ Then run that one test again with the same command, and read the result again.
 ## The traps
 
 - Exit code `0` does not mean the tests passed, and `1` does not mean a test failed: `1` is
-  a project that did not open. Codes `2` to `7` are sign-in and plan problems.
+  a project that did not open. Codes `2` to `8` are sign-in and plan problems.
   https://docs.justcat.it/reference/cat-cli/introduction/#exit-codes
 - With `Maximum errors logged` at its default of `1`, the message shows one offending row and
   says the scan was incomplete; raising it to see more costs a full read on a large set.

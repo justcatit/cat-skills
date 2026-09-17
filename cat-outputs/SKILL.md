@@ -77,7 +77,7 @@ the run, before any test, and a file that cannot be written fails at the end. Ru
 test with a name filter rather than the whole project:
 
 ```
-catcli run -f "<part of one test's full name>"
+catcli run -f "*<part of one test's full name>*"
 ```
 
 `-n` skips every output, so it does not check them; `show` opens the project but does not
@@ -85,7 +85,7 @@ look at the format names. Then look at the file, or at the table. After a run, `
 `0` whatever the results, so a pipeline that must fail on a failed test reads an output,
 `junit` or `json`, not the exit code. https://docs.justcat.it/reference/cat-cli/run/
 
-Any exit code from 2 to 7 is a sign-in or plan problem. The Starter and Professional plans
+Any exit code from 2 to 8 is a sign-in or plan problem. The Starter and Professional plans
 write `xlsx` only; every other format and every database output is refused on them, and the
 message says what the Team plan adds. Do not work around it; report what the message says.
 https://docs.justcat.it/reference/cat-cli/introduction/#exit-codes
@@ -104,6 +104,4 @@ https://docs.justcat.it/reference/cat-cli/introduction/#exit-codes
   directory; a missing directory is created.
 - Columns of a database table are matched by name, not by position; a column CAT does not
   recognize must be nullable or have a default, or every insert fails.
-- `xlsx` on Linux needs `libgdiplus`; without it the run ends with an error when the file is
-  written, after the tests ran.
 - `Path` is the older name of `File`; write `File`.

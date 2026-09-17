@@ -98,7 +98,7 @@ source with the number of tests using it, the suites, the settings. It exits `1`
 reason when the project does not open; `-l Information` shows where loading stopped. `-t`
 lists the tests by full name. https://docs.justcat.it/reference/cat-cli/show/
 
-Any exit code from 2 to 7 is a sign-in or plan problem, not a file problem. Do not work
+Any exit code from 2 to 8 is a sign-in or plan problem, not a file problem. Do not work
 around it; report what the message says.
 https://docs.justcat.it/reference/cat-cli/introduction/#exit-codes
 

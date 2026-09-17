@@ -29,6 +29,10 @@ Then look at the data through the project's own connection, so what you propose 
 catcli exec -d <name> -c "<a statement in the provider's language>"
 ```
 
+Through a pipe the rows arrive as CSV with a header row; an empty field is NULL and `""` an
+empty string; the row count and a provider error go to standard error and the exit code
+stays 0.
+
 The tables and views, their columns and types, the keys, a `MIN` and `MAX` of the date
 columns, a `COUNT` per obvious grouping, a `TOP 10`. Keep each statement small; a wide
 `SELECT *` on a big table is the one thing not to run. https://docs.justcat.it/reference/cat-cli/exec/

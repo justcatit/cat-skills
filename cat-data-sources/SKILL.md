@@ -66,11 +66,15 @@ connection and environment:
 catcli exec -d <name> -c "SELECT 1"
 ```
 
+Through a pipe the rows arrive as CSV with a header row; an empty field is NULL and `""` an
+empty string; the row count and a provider error go to standard error and the exit code
+stays 0.
+
 The provider's error comes back in the output with exit code 0; exit code 1 means the project
 did not open or the name is wrong; `-l Information` shows what CAT does while it opens the
 project. https://docs.justcat.it/reference/cat-cli/exec/
 
-Any exit code from 2 to 7 is a sign-in or plan problem, not a data source problem. Do not
+Any exit code from 2 to 8 is a sign-in or plan problem, not a data source problem. Do not
 work around it; report what the message says. The codes:
 https://docs.justcat.it/reference/cat-cli/introduction/#exit-codes
 

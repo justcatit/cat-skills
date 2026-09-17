@@ -6,7 +6,7 @@ description: >
   afterwards, and how the plan unlocks it (a sign-in token for Team, a license key for
   Enterprise; nothing on the command line for Starter and Professional). Obligatory reading
   before installing or updating any CAT tool, before setting a license key or a portal
-  token, and whenever a CAT command refuses to run with an exit code from 2 to 7.
+  token, and whenever a CAT command refuses to run with an exit code from 2 to 8.
 ---
 
 # Install CAT
@@ -53,8 +53,13 @@ opened before the install does not see the path. The verbs `instance`, `docs`, `
 
 The plan decides what runs; the machine holds the unlock:
 
-- **Enterprise**: a license key, set once per machine and account with `catcli instance
-  --setLicenseKey`; then every tool runs without sign-in, offline, unattended. Where it
+- **Enterprise**: a license key. Ask the person to put it into the environment, or into the
+  sandbox's secrets settings, as `CAT_LICENSE_KEY` — never ask for the key in the
+  conversation, and never read it: a key you handle ends up in the transcript and in the
+  command log. On a machine the person owns it can instead be stored once per machine and
+  account with `catcli instance --setLicenseKey`. Either way every tool then runs without
+  sign-in, offline, unattended. The variable wins over the stored key, and a value it cannot
+  use refuses the run (exit code `8`) rather than falling back. Where it
   lives and what it is not: https://docs.justcat.it/how-to-guides/licensing-and-admin/apply-license-key/
 - **Team**: a personal access token from the portal in the environment variable
   `CAT_PORTAL_TOKEN`; interactive use only, a pipeline or a scheduler is refused.
@@ -72,13 +77,13 @@ first command to run when a verb refuses.
 
 - A refusal is a plan or sign-in problem, never a broken install: `2` no usable token, `3`
   the plan has no command-line tools, `4` portal unreachable and no cache, `5` expired, `6`
-  interactive-only plan started by automation, `7` a per-project limit. Report the message;
+  interactive-only plan started by automation, `7` a per-project limit, `8` `CAT_LICENSE_KEY`
+  holds no key CAT can use. Report the message;
   do not work around it, and never put a key or a token into a project file.
 - The key and the token are per machine **and per account**: a key set under one user is
   not there for the service account a scheduler runs as.
 - A valid Enterprise key makes `CAT_PORTAL_TOKEN` irrelevant; with both present the key
   wins.
-- Linux without ICU stops at startup with a message about a missing ICU package; the Excel
-  output needs `libgdiplus`.
+- Linux without ICU stops at startup with a message about a missing ICU package.
 - `~/.local/bin` is on the path from the next login, not in the current shell.
 - Pin the version in anything automated; upgrade on purpose, after a test.
