@@ -113,6 +113,7 @@ When the statement fails, read the error against these, in order:
 
 ClickHouse@1 https://docs.justcat.it/reference/data-sources/providers/clickhouse-1/ ·
 Csv@2 https://docs.justcat.it/reference/data-sources/providers/csv-2/ ·
+Databricks@1 https://docs.justcat.it/reference/data-sources/providers/databricks-1/ ·
 Dax@2 https://docs.justcat.it/reference/data-sources/providers/dax-2/ ·
 Excel@2 https://docs.justcat.it/reference/data-sources/providers/excel-2/ ·
 MySql@1 https://docs.justcat.it/reference/data-sources/providers/mysql-1/ ·

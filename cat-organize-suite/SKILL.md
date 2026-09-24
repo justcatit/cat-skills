@@ -48,7 +48,10 @@ in a worksheet, `TestSuite` in YAML); within one document keep one style:
 https://docs.justcat.it/reference/project-file/naming-conventions/
 
 One test that should exist per table, customer or contract is a template, not a copy;
-load the skill for generating tests from metadata.
+load the skill for generating tests from metadata. Tagging or renaming across a suite changes
+each definition where it is stored, and a template is one of those places: its generated tests
+have no definition of their own, so a tag added to the template is a tag on every test it
+generates. https://docs.justcat.it/reference/tests/templates/
 
 ## Moving definitions without breaking the project
 

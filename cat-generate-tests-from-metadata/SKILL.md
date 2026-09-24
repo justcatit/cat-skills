@@ -51,9 +51,14 @@ that never ran generates the same mistake once per row.
 ## Check what you wrote
 
 `catcli show -t` lists the generated tests by full name, one per row, and the template is
-not among them; `catcli show -s` has the count. A template whose query names a missing
-query or data source, or whose query fails, fails the open, and the message names the
-template. https://docs.justcat.it/reference/cat-cli/show/
+not among them; `catcli show -s` has the count. A template whose query names a missing query
+or data source, or whose query fails, fails the open, and the message names the template.
+https://docs.justcat.it/reference/cat-cli/show/
+
+Those listed names are in no file, and the listing does not say which template produced them:
+never edit a generated test, and never write one into the project file as a test of its own.
+A change to a generated test — a tag as much as a query — is a change to the template, which
+the next expansion applies to every row. https://docs.justcat.it/reference/tests/templates/
 
 ## The traps
 

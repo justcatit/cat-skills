@@ -40,6 +40,12 @@ https://docs.justcat.it/reference/project-file/naming-conventions/
 Tests may also live outside the project file: follow every `Get list of tests from:` entry,
 and change a test where it is stored. https://docs.justcat.it/reference/project-file/lists/
 
+A test whose `Metadata` property names a query is a template, and the tests it generates are
+not in the file at all — they exist only in the opened project. There is nothing to edit per
+test: change the template once and every generated test carries it. Load the skill for
+generating tests from metadata before touching one.
+https://docs.justcat.it/reference/tests/templates/
+
 ## Pick the expectation by the question, never invent one
 
 There are exactly five expectations. Pick by the question the test asks, then read the
