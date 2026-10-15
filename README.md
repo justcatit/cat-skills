@@ -25,4 +25,4 @@ the tag `v<version>` matching it.
 ---
 
 The skill files in this repository are MIT licensed (see LICENSE). CAT itself is a commercial
-product licensed under its own terms of use: https://docs.justcat.it/license/
+product licensed under its own terms of use: https://docs.justcat.it/terms-of-use/
