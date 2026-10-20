@@ -20,17 +20,19 @@ tool summarizes HTML.
 ## Which tool
 
 - A person with no command line: **CAT Studio**, Windows only, from the Microsoft Store.
-- A machine, a script, a pipeline, an agent: **CAT CLI**, a single executable with no
-  runtime to install, on Windows, Linux and macOS. The default for an agent.
-- A team already on PowerShell 7: the **PowerShell module**, results as objects.
-- A Python environment: the **Python module** (`justcatit` on PyPI), which needs a .NET
-  runtime next to it.
+- A terminal, a script, a pipeline: **CAT CLI**, a single executable with no runtime to
+  install, on Windows, Linux and macOS. The tool to use, for a person or an agent, when there
+  is no reason to choose the PowerShell module or the Python module.
+- Work that already lives in PowerShell 7, and results wanted as objects: the **PowerShell
+  module**.
+- Work that already lives in Python, and results wanted as objects: the **Python module**
+  (`justcatit` on PyPI), which needs a .NET runtime next to it.
+
+When the user already works with the PowerShell module or the Python module, use it rather
+than installing CAT CLI next to it. The same steps in the three tools:
+https://docs.justcat.it/reference/basics/cli-powershell-python/
 
 The comparison, with what each cannot do: https://docs.justcat.it/reference/basics/cat-tools/
-
-"I have the CLI, I have everything" holds for running tests and writing outputs; it does
-not hold for the Windows-only providers (DAX, Power BI, the OLE DB file providers), which
-need a Windows machine whichever tool runs them.
 
 ## Install, then verify
 

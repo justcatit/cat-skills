@@ -17,6 +17,9 @@ is not edited here — a pull request against this repository will not be review
   install; unpack it into your agent's skills folder. It also carries the packaged
   documentation pages the skills link to, for when your agent cannot fetch a URL.
 
+Your first message to the agent can be "I don't trust this number on my dashboard"; the
+`cat-verify-a-number` skill walks from the number to the test that settles it.
+
 ## Versions
 
 The tip of `main` always carries the newest CAT CLI's skills. An older CLI's skills are on

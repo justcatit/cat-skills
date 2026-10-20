@@ -36,6 +36,9 @@ https://docs.justcat.it/reference/cat-cli/show/
 
 The same run from CAT Studio, the PowerShell module and the Python module:
 https://docs.justcat.it/how-to-guides/organize-and-run-tests/run-your-tests/
+When the user works with the PowerShell or Python module rather than CAT CLI, every run and
+filter on this page has its module form, and the summary object replaces the exit code:
+https://docs.justcat.it/reference/basics/cli-powershell-python/
 
 ## Read what came back
 
